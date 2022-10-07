@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: many-apps-many-cluster
+  namespace: argocd
 spec:
   generators:
     # matrix 'parent' generator
@@ -30,7 +31,7 @@ spec:
       # Destination cluster and namespace to deploy the application	  
       destination:
         server: '{{server}}'
-        namespace: billing
+        namespace: '{{path.basename}}'
 
       syncPolicy:
         syncOptions:
