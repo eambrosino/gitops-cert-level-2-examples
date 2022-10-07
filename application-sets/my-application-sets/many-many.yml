@@ -20,13 +20,13 @@ spec:
     spec:
       # The project the application belongs to
       project: default
-	  
+
       # Source of the application manifests
       source:
         repoURL: https://github.com/eambrosino/gitops-cert-level-2-examples.git
         targetRevision: HEAD
         path: '{{path}}'
-	  
+
       # Destination cluster and namespace to deploy the application	  
       destination:
         server: '{{server}}'
