@@ -30,7 +30,7 @@ spec:
       # Destination cluster and namespace to deploy the application	  
       destination:
         server: '{{server}}'
-        namespace: '{{path.basename}}'
+        namespace: 'ns-{{path.basename}}'
 
       syncPolicy:
         syncOptions:
