@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: single-app-many-times-elena
+  name: single-app-many-times
   namespace: argocd
 spec:
   generators:
