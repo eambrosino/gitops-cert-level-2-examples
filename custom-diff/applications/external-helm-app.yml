@@ -7,6 +7,8 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
+  ignoreDifferences:
+  
 
   source:
     repoURL: https://github.com/codefresh-contrib/gitops-cert-level-2-examples.git
@@ -21,4 +23,3 @@ spec:
   syncPolicy:
     syncOptions:
       - CreateNamespace=true  
-   
