@@ -21,4 +21,11 @@ spec:
   syncPolicy:
     syncOptions:
       - CreateNamespace=true  
+      
+  # solve OutOfSync due to hpa
+  ignoreDifferences:
+  - group: apps
+    kind: Deployment
+    jsonPointers:
+    - /spec/replicas
    
